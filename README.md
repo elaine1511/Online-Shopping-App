@@ -1,7 +1,7 @@
-# SIMPLE E-COMMERCE STORE APPLICATION
+# ONLINE CROCHET TOYS CHIPISTORE APPLICATION
 
-I and my husband have our small business to sell craftmanship crotchet toys for children. We are selling on other platforms such as Shopify, Etsy and Amazon. 
-We would like to build our own online store to serve as the main selling platform to catch more customers.
+I have my small business to sell craftmanship crochet toys for children. I am selling on other platforms such as Shopify, Etsy and Amazon. 
+I would like to build my own simple online store to serve as one of the selling platforms to catch more customers.
 
 ## I will design:
-An e-commerce web application for selling crotchet toys using AWS Amplify Framework
+An e-commerce web application using AWS Amplify Libraray with React Framwork to add the products, browse orde, and notify customer when 
