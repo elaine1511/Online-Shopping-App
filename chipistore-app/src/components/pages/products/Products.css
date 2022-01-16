@@ -1,0 +1,22 @@
+
+.prod-list-container {
+    margin: 3rem 0;
+}
+.prod-list-title {
+      margin-top: 5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+.prod-list, div{
+        margin: 1rem;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width:1024px) {
+        .prod-list-container .prod-list{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+        }  
+      }

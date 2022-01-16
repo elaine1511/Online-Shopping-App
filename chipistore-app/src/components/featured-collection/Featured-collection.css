@@ -1,0 +1,22 @@
+
+.fed-collection {
+    margin-top: 2rem;
+  }
+  .fed-collection-title {
+      font-size: 2rem;
+  
+    }
+
+  @media screen and (min-width:1024px) {
+    .fed-collection .fed-prods{
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+    }
+  }
+  @media screen and (min-width:1024px) {
+    .fed-collection .fed-prods .fed-prod{
+     margin:10px
+    }
+  }
+  

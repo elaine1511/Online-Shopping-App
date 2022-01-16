@@ -1,0 +1,58 @@
+type Product
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      { allow: groups, groups: ["Admin"] }
+      { allow: public, operations: [read] }
+      { allow: private, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  description: String!
+  image: String!
+  price: Float
+  featured: Boolean
+  orders: [Order] @manyToMany(relationName: "ProductOrder")
+}
+type Order
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      { allow: owner, identityClaim: "email", ownerField: "user" }
+      { allow: groups, groups: ["Admin"] }
+    ]
+  ) {
+  id: ID!
+  user: String!
+  date: String
+  totalAmount: Float
+  products: [Product] @manyToMany(relationName: "ProductOrder")
+}
+
+enum OrderStatus {
+  SUCCESS
+  FAILED
+}
+
+input ShoppingCart {
+  id: ID!
+  name: String
+  image: String
+  price: Float
+  amount: Int
+}
+
+input ProcessOrderInput {
+  id: ID!
+  cart: [ShoppingCart]
+  totalAmount: Float
+  token: String
+  address: String
+}
+
+type Mutation {
+  processOrder(input: ProcessOrderInput!): OrderStatus
+    @function(name: "createOrder-${env}")
+    @function(name: "makePayment-${env}")
+}

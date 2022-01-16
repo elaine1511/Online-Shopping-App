@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "chipistoreapp",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/hungle/Documents/BANGTAM FOLDERS/MASTER-MIU/FINAL-PROJECT/chipistore-app/amplify/backend/api/chipistoreapp/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authchipistoreapp0ef4fd30"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2023-01-13T07:09:55.763Z",
+        "keyDescription": "Guest user access to products"
+      }
+    ]
+  }
+}

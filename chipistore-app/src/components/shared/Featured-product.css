@@ -1,0 +1,19 @@
+
+.fed-product {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 1rem;
+  margin-left: 1rem 0;
+}
+.fed-img{
+  cursor: pointer;
+}
+  p {
+    font-size: 1.1rem;
+    color:coral;
+    font-weight: bold;
+  }
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 420;
+  }

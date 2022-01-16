@@ -1,0 +1,17 @@
+.container{
+    margin-right: auto;
+    cursor:pointer;
+}
+img{
+    width: 30px;
+    margin-top: 10px;
+}
+
+.cart-items{
+background-color:black;
+color:white;
+padding-right: 2px;
+border-radius: 10px;
+margin-left: -10px;
+
+}

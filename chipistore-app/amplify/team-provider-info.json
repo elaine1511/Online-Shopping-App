@@ -1,0 +1,31 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-chipistoreapp-prod-05900-authRole",
+      "UnauthRoleArn": "arn:aws:iam::295027746551:role/amplify-chipistoreapp-prod-05900-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::295027746551:role/amplify-chipistoreapp-prod-05900-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-chipistoreapp-prod-05900-deployment",
+      "UnauthRoleName": "amplify-chipistoreapp-prod-05900-unauthRole",
+      "StackName": "amplify-chipistoreapp-prod-05900",
+      "StackId": "arn:aws:cloudformation:us-east-1:295027746551:stack/amplify-chipistoreapp-prod-05900/4aabcc10-743e-11ec-96e4-0e1d20f535ad",
+      "AmplifyAppId": "dr4cc6hly05x5"
+    },
+    "categories": {
+      "auth": {
+        "chipistoreapp0ef4fd30": {},
+        "true": {}
+      },
+      "function": {
+        "createOrder": {
+          "deploymentBucketName": "amplify-chipistoreapp-prod-05900-deployment",
+          "s3Key": "amplify-builds/createOrder-6a4c4675456e734f5658-build.zip"
+        },
+        "makePayment": {
+          "deploymentBucketName": "amplify-chipistoreapp-prod-05900-deployment",
+          "s3Key": "amplify-builds/makePayment-636468727759547a4649-build.zip"
+        }
+      }
+    }
+  }
+}
