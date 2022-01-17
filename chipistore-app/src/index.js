@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { ProductContextProvider } from './context/products-context'
+import { CartContextProvider } from './context/cart-context';
 import reportWebVitals from './reportWebVitals';
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
@@ -10,7 +11,9 @@ Amplify.configure(awsExports);
 
 ReactDOM.render(
   <ProductContextProvider>
-    <App />
+    <CartContextProvider>
+      <App />
+    </CartContextProvider>
   </ProductContextProvider>
   ,
   document.getElementById('root')

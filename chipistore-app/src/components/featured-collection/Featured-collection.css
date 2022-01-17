@@ -11,12 +11,9 @@
     .fed-collection .fed-prods{
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 5px;
     }
   }
-  @media screen and (min-width:1024px) {
-    .fed-collection .fed-prods .fed-prod{
-     margin:10px
-    }
-  }
+  
   
