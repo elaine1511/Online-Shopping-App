@@ -14,8 +14,8 @@ const ProductContextProvider = ({ children }) => {
     }, [])
 
     const fetchAllProducts = async () => {
+        setLoading(true);
         try {
-            setLoading(true);
             const result = await API.graphql({
                 query: queries.listProducts,
                 authMode: "API_KEY" //switch authMode for public access
@@ -31,9 +31,8 @@ const ProductContextProvider = ({ children }) => {
             setFeatured(featuredProd);
             setLoading(false)
         } catch (e) {
-            console.log(e);
+            console.error('Failed fetching products:', e);
         }
-
     }
 
     return (

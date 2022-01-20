@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Hero.css'
@@ -16,8 +17,11 @@ const Hero = () => {
                         <br />our brand offers nothing but the best for our little angels.
                     </h3>
                     <div>
-                        <Link className="button" to="/products">Shop Now</Link>
+                        <Link className="btn" to="/products">Shop Now</Link>
+
                     </div>
+
+
                 </div>
             </div>
         </section>

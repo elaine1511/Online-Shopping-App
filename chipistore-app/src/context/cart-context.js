@@ -3,9 +3,9 @@ import ShoppingCartReducer, { sumCartItems } from './cart-reducer';
 
 const CartContext = React.createContext();
 //check if there is cart in localstorage
-const getItem = localStorage.getItem('cartItem');
-console.log(getItem)
-let cartItemInStorage = getItem ? JSON.parse(getItem) : [];
+const getCart = localStorage.getItem('cartItem');
+console.log('get cart from local storage:', getCart);
+let cartItemInStorage = getCart ? JSON.parse(getCart) : [];
 
 const initialState = { cartItems: cartItemInStorage, ...sumCartItems(cartItemInStorage) };
 

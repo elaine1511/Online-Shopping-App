@@ -40,7 +40,7 @@ input ShoppingCart {
   name: String
   image: String
   price: Float
-  amount: Int
+  quantity: Int
 }
 
 input ProcessOrderInput {

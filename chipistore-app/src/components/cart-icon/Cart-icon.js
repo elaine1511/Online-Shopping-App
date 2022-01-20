@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 const CartIcon = () => {
     const navigate = useNavigate();
-    const { itemQuantity, cartItems } = React.useContext(CartContext);
-    console.log('items in cart:', cartItems)
+    const { itemQuantity } = React.useContext(CartContext);
+
     return (
         <div className='container' onClick={() => navigate('/cart')}>
             <img

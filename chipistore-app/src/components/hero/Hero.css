@@ -1,7 +1,7 @@
 .hero-img{
     background: transparent url('../../assets/intro.jpeg') center/cover no-repeat;
 }
-.button {
+.btn {
     padding: 1rem 2rem;
     background: #e2d277;
     color: black;

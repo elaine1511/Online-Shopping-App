@@ -13,18 +13,19 @@ const ProductDetail = () => {
     const navigate = useNavigate();
     const product = products.find(prod => prod.id === id)
     console.log('prod detail:', product);
-    useEffect(() => {
-        if (!product)
-            navigate('/products')
-    })
+
+    if (!product) {
+        return <h3>Loading...</h3>;
+    }
 
     const { image, name, description, price } = product;
 
     return (
         <Layout>
             <div className='prod-detail-container'>
-                <div className='prod-img'>
-                    <img src={image} alt='singleProd' />
+                <div className='image is-96x96'>
+                    <img
+                        src={image} alt='singleProd' />
                 </div>
                 <div className='prod-detail'>
                     <div>
@@ -54,7 +55,7 @@ const ProductDetail = () => {
                         <button
                             className='button is-black is-outlined  nomad-btn'
                             id='btn-cart'
-                            onClick={() => { }}
+                            onClick={() => navigate('/checkout')}
                         >Proceed To Checkout </button>
 
                     </div>

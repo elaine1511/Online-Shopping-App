@@ -57,7 +57,7 @@ const Cart = () => {
                             <div className="total-wrapper">
                                 <div className="total">
                                     <p>Total Items: {itemQuantity}</p>
-                                    <p>Total: ${totalAmount}</p>
+                                    <p>Total Amount: ${totalAmount}</p>
                                 </div>
                                 <div className="checkout">
                                     <button
@@ -66,8 +66,8 @@ const Cart = () => {
                                     >
                                         Checkout
                                     </button>
-                                    <button className="button is-outlined " onClick={() => clearCart()}>
-                                        Clear
+                                    <button className="button is-danger is-outlined " onClick={() => clearCart()}>
+                                        Empty Cart
                                     </button>
                                 </div>
                             </div>
