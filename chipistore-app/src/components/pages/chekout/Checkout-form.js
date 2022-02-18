@@ -35,8 +35,10 @@ const CheckoutForm = () => {
     useEffect(() => {
         if (orderDetails.token) {
             checkout(orderDetails);
+            clearCart();
+            navigate('/')
         }
-    }, [orderDetails]);
+    }, [orderDetails, checkout, clearCart, navigate]);
 
     const handleCardChange = (e) => {
         if (e.error) {

@@ -50,3 +50,9 @@ input ProcessOrderInput {
   token: String
   address: String
 }
+
+type Mutation {
+  processOrder(input: ProcessOrderInput!): OrderStatus
+    @function(name: "makePaymentLambda")
+    @function(name: "createOrderLambda")
+}
