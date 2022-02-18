@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { API } from 'aws-amplify';
+import { API, graphqlOperation } from 'aws-amplify';
 import * as queries from '../graphql/queries';
+import { v4 as uuidv4 } from "uuid";
+import { processOrder } from "../graphql/mutations";
 
 const ProductContext = React.createContext();
 
@@ -12,7 +14,16 @@ const ProductContextProvider = ({ children }) => {
     useEffect(() => {
         fetchAllProducts();
     }, [])
+    const checkout = async (orderDetails) => {
+        const payload = {
+            id: uuidv4(), ...orderDetails
+        };
+        try {
+            await API.graphql(graphqlOperation(processOrder, { input: payload }))
+            console.log('successful')
+        } catch (err) { console.log(err) }
 
+    }
     const fetchAllProducts = async () => {
         setLoading(true);
         try {
@@ -36,7 +47,7 @@ const ProductContextProvider = ({ children }) => {
     }
 
     return (
-        <ProductContext.Provider value={{ products, featured, loading }}>
+        <ProductContext.Provider value={{ products, featured, loading, checkout }}>
             {children}
         </ProductContext.Provider>
     )

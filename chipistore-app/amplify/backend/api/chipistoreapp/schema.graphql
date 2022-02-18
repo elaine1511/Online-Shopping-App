@@ -50,9 +50,3 @@ input ProcessOrderInput {
   token: String
   address: String
 }
-
-type Mutation {
-  processOrder(input: ProcessOrderInput!): OrderStatus
-    @function(name: "createOrder-${env}")
-    @function(name: "makePayment-${env}")
-}

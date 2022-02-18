@@ -1,5 +1,6 @@
 
 import 'bulma/css/bulma.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from './components/Home';
@@ -22,7 +23,6 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/admin" element={<AdminPanel />} />
-          {/* <Route path="/" element={<SearchPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
